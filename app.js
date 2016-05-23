@@ -6,18 +6,19 @@ var app = express();
 var homeController = require('./controllers/home');
 var apiController = require('./controllers/api')
 
+// Serve static files (i.e. images, scripts, styles, templates) from public/ directory
+app.use(express.static('public'));
+
 //Jade
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // Routes
 app.get('/', homeController.index);
-app.get('/about', aboutController.index);
+
 
 app.get('/api/all', apiController.all);
 app.get('/api/get/:id', apiController.get);
 
-// Serve static files (i.e. images, scripts, styles, templates) from public/ directory
-app.use(express.static('public'));
 
 app.get('/*', homeController.noRoute)
 
