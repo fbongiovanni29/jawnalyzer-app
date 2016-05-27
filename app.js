@@ -7,7 +7,11 @@
   var apiController = require('./controllers/api')
 
   //Jade
-  app.set('view engine', 'pug');
+  // app.set('view engine', 'pug');
+
+  app.set('views', __dirname + '/views');
+  app.set('view engine', 'jsx');
+  app.engine('jsx', require('express-react-views').createEngine());
 
   // Routes
   app.get('/', homeController.index);
