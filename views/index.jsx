@@ -23,7 +23,7 @@ var Jawn = React.createClass({
               width={1000}
               height={500}>
               <Column
-                header={<Cell>Type</Cell>}
+                header={<Cell>Job Titles *{this.state.companies} reported*</Cell>}
                 cell={props => (
                   <Cell {...props}>
                     {this.state.title[props.rowIndex].type}
@@ -38,7 +38,34 @@ var Jawn = React.createClass({
                     {this.state.title[props.rowIndex].amount}
                   </Cell>
                 )}
+                width={100}
+              />
+            </Table>
+          </div>
+          <div>
+            <Table
+              rowsCount={this.state.technologies.length}
+              rowHeight={50}
+              headerHeight={50}
+              width={1000}
+              height={500}>
+              <Column
+                header={<Cell>Skills Listed *{this.state.amt_technologies} reported*</Cell>}
+                cell={props => (
+                  <Cell {...props}>
+                    {this.state.title[props.rowIndex].type}
+                  </Cell>
+                )}
                 width={200}
+              />
+              <Column
+                header={<Cell>Amount</Cell>}
+                cell={props => (
+                  <Cell {...props}>
+                    {this.state.title[props.rowIndex].amount}
+                  </Cell>
+                )}
+                width={100}
               />
             </Table>
           </div>
