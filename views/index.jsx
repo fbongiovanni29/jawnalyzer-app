@@ -1,20 +1,46 @@
 var React = require('react');
+const {Table, Column, Cell} = require('fixed-data-table');
 
 var Jawn = React.createClass({
     getInitialState: function() {
         return this.props.jawn;
     },
   render: function() {
+    console.log(this.state.title)
         return (
           <div>
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fixed-data-table/0.6.0/fixed-data-table-base.min.css" />
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fixed-data-table/0.6.0/fixed-data-table.min.css" />
             <div>
                 <h1>Amount of Companies: {this.state.companies}</h1>
                 <h1>Amount Remote: {this.state.remote}</h1>
           </div>
           <div>
-                  {this.state.title.map(function(title){
-                        return <h1>{title.type}: {title.amount}</h1>;
-                  })}
+            <Table
+              rowsCount={this.state.title.length}
+              rowHeight={50}
+              headerHeight={50}
+              width={1000}
+              height={500}>
+              <Column
+                header={<Cell>Type</Cell>}
+                cell={props => (
+                  <Cell {...props}>
+                    {this.state.title[props.rowIndex].type}
+                  </Cell>
+                )}
+                width={200}
+              />
+              <Column
+                header={<Cell>Amount</Cell>}
+                cell={props => (
+                  <Cell {...props}>
+                    {this.state.title[props.rowIndex].amount}
+                  </Cell>
+                )}
+                width={200}
+              />
+            </Table>
           </div>
             <div>
                 {this.state.technologies.map(function(technology){
