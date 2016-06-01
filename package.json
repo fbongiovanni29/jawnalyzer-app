@@ -12,10 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",
+    "express-react-views": "^0.10.1",
     "fixed-data-table": "^0.6.0",
     "jade": "^1.11.0",
     "pug": "^0.1.0",
-    "react-bootstrap": "^0.29.4"
+    "react": "^0.14.0",
+    "react-dom": "^0.14.8",
+    "react-engine": "^3.4.1",
+    "request": "^2.72.0"
   },
   "devDependencies": {
     "babel-core": "^6.9.0",
