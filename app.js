@@ -22,6 +22,6 @@
 
   app.get('/*', homeController.noRoute)
 
-  app.listen(4567, function () {
-    console.log('Your app is listening on port 4567!');
+  app.listen(process.env.PORT || 4567, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
