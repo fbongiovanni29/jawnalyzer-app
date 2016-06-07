@@ -1,13 +1,10 @@
   var express = require('express');
   var app = express();
 
-
+  port = process.env.PORT || 4567
   // Tell app.js about the home controller using require
   var homeController = require('./controllers/home');
   var apiController = require('./controllers/api')
-
-  //Jade
-  // app.set('view engine', 'pug');
 
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jsx');
@@ -22,6 +19,6 @@
 
   app.get('/*', homeController.noRoute)
 
-  app.listen(process.env.PORT || 4567, function(){
+  app.listen(port, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });

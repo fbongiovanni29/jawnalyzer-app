@@ -1,7 +1,7 @@
 var request = require('request');
 
 exports.index = function (req, res) {
-  request('http://localhost:4567/api/get/0', function(err, response, body) {
+  request('http://localhost:' + port + '/api/get/0', function(err, response, body) {
     if(!err && response.statusCode == 200) {
         res.render('index', {
             technologies: JSON.parse(body),
