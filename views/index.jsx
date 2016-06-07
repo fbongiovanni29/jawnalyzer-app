@@ -14,7 +14,7 @@ var Jawn = React.createClass( {
       <Navbar>
           <Navbar.Header>
               <Navbar.Brand>
-                  Jawnalyzer
+                  Jawnalyzer (Analysis of <a href="http://jobjawn.com">jobjawn.com</a>)
               </Navbar.Brand>
           </Navbar.Header>
           <Nav pullRight>
@@ -47,7 +47,7 @@ var Jawn = React.createClass( {
           <Column
                   header={ <Cell>
                              Job Titles *
-                             { this.state.companies } reported*
+                             { this.state.amt_jobs } reported*
                            </Cell> }
                   cell={ props => (
                            <Cell {...props}>
@@ -71,19 +71,19 @@ var Jawn = React.createClass( {
         <Table
                rowsCount={ this.state.technologies.length }
                rowHeight={ 50 }
-               headerHeight={ 110 }
-               width={ 300 }
+               headerHeight={ 50 }
+               width={ 330 }
                height={ this.state.technologies.length * 50 + 50 }>
           <Column
                   header={ <Cell>
-                             Sum amount of { this.state.amt_technologies } companies listed multiple skillsets/technologies used.
+                             All skillsets listed by { this.state.amt_technologies } companies
                            </Cell> }
                   cell={ props => (
                            <Cell {...props}>
                              { this.state.technologies[ props.rowIndex ].type }
                            </Cell>
                          ) }
-                  width={ 200 } />
+                  width={ 250 } />
           <Column
                   header={ <Cell>
                              Amount
@@ -93,7 +93,7 @@ var Jawn = React.createClass( {
                              { this.state.technologies[ props.rowIndex ].amount }
                            </Cell>
                          ) }
-                  width={ 100 } />
+                  width={ 80 } />
         </Table>
         </Col>
         <div>
