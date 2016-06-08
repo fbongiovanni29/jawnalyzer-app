@@ -6,6 +6,7 @@
   var homeController = require('./controllers/home');
   var apiController = require('./controllers/api')
 
+  // Sets view engine similar to jade rendering
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jsx');
   app.engine('jsx', require('express-react-views').createEngine());
