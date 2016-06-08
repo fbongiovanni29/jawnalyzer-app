@@ -43,7 +43,7 @@ var Jawn = React.createClass( {
                rowHeight={ 50 }
                headerHeight={ 50 }
                width={ 300 }
-               height={ this.state.title.length * 50 + 50 }>
+               height={ this.state.title.length * 50 + 55 }>
           <Column
                   header={ <Cell>
                              Job Titles *
@@ -73,7 +73,7 @@ var Jawn = React.createClass( {
                rowHeight={ 50 }
                headerHeight={ 50 }
                width={ 330 }
-               height={ this.state.technologies.length * 50 + 50 }>
+               height={ this.state.technologies.length * 50 + 55 }>
           <Column
                   header={ <Cell>
                              All skillsets listed by { this.state.amt_technologies } companies
@@ -103,7 +103,7 @@ var Jawn = React.createClass( {
                  rowHeight={ 50 }
                  headerHeight={ 50 }
                  width={ 300 }
-                 height={ this.state.employmentType.length * 50 + 50 }>
+                 height={ this.state.employmentType.length * 50 + 55 }>
             <Column
                     header={ <Cell>
                                Employment Types
@@ -131,7 +131,7 @@ var Jawn = React.createClass( {
                  rowHeight={ 50 }
                  headerHeight={ 50 }
                  width={ 300 }
-                 height={ this.state.type.length * 50 + 50 }>
+                 height={ this.state.type.length * 50 + 55 }>
             <Column
                     header={ <Cell>
                                Company Types
@@ -161,7 +161,7 @@ var Jawn = React.createClass( {
                rowHeight={ 50 }
                headerHeight={ 50 }
                width={ 300 }
-               height={ this.state.jobLocation.length * 50 + 50 }>
+               height={ this.state.jobLocation.length * 50 + 55 }>
           <Column
                   header={ <Cell>
                              Job Locations
